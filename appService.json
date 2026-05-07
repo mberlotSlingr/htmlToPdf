@@ -1,0 +1,60 @@
+{
+"label": "htmltopdf",
+"name": "htmltopdf",
+"apiVersion": "v1",
+"configurationType": "GLOBAL",
+"deployment": {
+    "jsService": true,
+    "profiles":[
+        {
+            "name": "small",
+            "label": "Small",
+            "memory": 128,
+            "description": "Small Memory Allocation"
+        },
+        {
+            "name": "default",
+            "label": "Default",
+            "memory": 256,
+            "description": "Default Memory Allocation"
+        },
+        {
+            "name": "medium",
+            "label": "Medium",
+            "memory": 512,
+            "description": "Medium Memory Allocation"
+        },
+        {
+            "name": "big",
+            "label": "Big",
+            "memory": 1024,
+            "description": "Big Memory Allocation"
+        }
+    ],
+    "allowMultipleInstances": false
+},
+"status": "ACTIVE",
+"stores": [],
+"events": [
+    {
+        "label": "On Generate Complete",
+        "name": "onGenerateComplete",
+        "description": "Callback event for when the file has been generated"
+    }
+],
+"functions": [
+    {
+      "name": "generate",
+      "label": "Generate PDF from HTML",
+      "description": "Generates a PDF file using HTML templates (body, header, footer) and a data model.",
+      "callbacks": [
+            {
+                "name": "onGenerateComplete",
+                "maxWaitingTime": 120000,
+                "maxExpectedResponses": 1
+            }
+        ]
+    }
+  ],
+"configuration":[]
+}

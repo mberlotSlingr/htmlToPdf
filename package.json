@@ -1,0 +1,32 @@
+{
+  "name": "htmltopdf",
+  "version": "1.0.0",
+  "description": "Slingr Service to generate PDFs from HTML templates",
+  "main": "appService.js",
+  "scripts": {
+    "start": "node appService.js",
+    "startDev": "nodemon appService.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mati Berlot <mberlot@slingr.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slingr-stack/html-to-pdf-service.git"
+  },
+  "keywords": [
+    "slingr",
+    "html",
+    "pdf",
+    "puppeteer",
+    "services"
+  ],
+  "dependencies": {
+    "@slingr/slingr-services": "^0.0.8",
+    "dotenv": "^16.4.5",
+    "handlebars": "^4.7.8",
+    "puppeteer": "^22.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
