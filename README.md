@@ -34,8 +34,4 @@ This repository is intended to:
 
 - Encapsulate PDF generation logic
 - Provide a maintainable integration point for Slingr-based solutions
-- Simplify document generation workflows
-
-## Notes
-
-The previous README referred to `docx-templater`, but this repository is named `htmlToPdf`. This document reflects the repository name and describes the project as an HTML-to-PDF service.
+- Simplify document generation workflow
